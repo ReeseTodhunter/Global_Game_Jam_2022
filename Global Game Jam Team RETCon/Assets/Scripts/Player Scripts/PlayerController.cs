@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 { 
     [SerializeField]
-    private float moveSpeed = 5f;
+    private float moveSpeed = 4.0f;
     [SerializeField]
-    private float projectileSpeed = 6f;
+    private float projectileSpeed = 6.0f;
+    [SerializeField]
+    private const float baseShotDelay = 0.3f;
 
     [SerializeField]
     private Rigidbody2D rb;
@@ -15,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private GameObject BarrelEnd;
     [SerializeField]
     private GameObject projectile;
+
+    private float shotDelay;
+    private bool firing;
 
     Vector2 movement;
 
@@ -26,7 +31,11 @@ public class PlayerController : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Fire();
+            firing = true;
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            firing = false;
         }
     }
 
@@ -34,6 +43,16 @@ public class PlayerController : MonoBehaviour
     {
         //Get a constant movement speed by using fixedDeltaTime
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(shotDelay > 0)
+        {
+            shotDelay -= Time.fixedDeltaTime;
+        }
+
+        if (firing && shotDelay <= 0)
+        {
+            Fire();
+            shotDelay = baseShotDelay;
+        }
     }
 
     void Fire()

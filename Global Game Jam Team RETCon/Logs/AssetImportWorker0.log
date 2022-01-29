@@ -15,11 +15,19 @@ C:/Users/s4001418/Documents/GitHub/Global_Game_Jam_2022/Global Game Jam Team RET
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 64521
 Successfully changed project path to: C:/Users/s4001418/Documents/GitHub/Global_Game_Jam_2022/Global Game Jam Team RETCon
 C:/Users/s4001418/Documents/GitHub/Global_Game_Jam_2022/Global Game Jam Team RETCon
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 134.48 ms, found 4 plugins.
+=======
+58448
+Successfully changed project path to: C:/Users/s4002577/Documents/GitHub/Global_Game_Jam_2022/Global Game Jam Team RETCon
+C:/Users/s4002577/Documents/GitHub/Global_Game_Jam_2022/Global Game Jam Team RETCon
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 184.82 ms, found 4 plugins.
+>>>>>>> Reese
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.12f1 (afcadd793de6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +43,11 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+>>>>>>> Reese
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,12 +55,17 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
+<<<<<<< HEAD
 Registered in 0.004383 seconds.
+=======
+Registered in 0.007186 seconds.
+>>>>>>> Reese
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 110.08 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -56,11 +73,21 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (3211ms)
 		BeginReloadAssembly (120ms)
+=======
+Refreshing native plugins compatible for Editor in 108.46 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.030 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3030ms)
+		BeginReloadAssembly (144ms)
+>>>>>>> Reese
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 		EndReloadAssembly (599ms)
 			LoadAssemblies (124ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -68,20 +95,40 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (45ms)
 			SetupLoadedEditorAssemblies (278ms)
+=======
+		EndReloadAssembly (660ms)
+			LoadAssemblies (147ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (264ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (271ms)
+>>>>>>> Reese
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< HEAD
 				RefreshPlugins (110ms)
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (121ms)
 				ProcessInitializeOnLoadMethodAttributes (35ms)
+=======
+				RefreshPlugins (109ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+>>>>>>> Reese
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.015307 seconds.
+=======
+Registered in 0.023851 seconds.
+>>>>>>> Reese
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -90,6 +137,7 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 109.27 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -97,10 +145,20 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1690ms)
 		BeginReloadAssembly (244ms)
+=======
+Refreshing native plugins compatible for Editor in 98.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.750 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1750ms)
+		BeginReloadAssembly (275ms)
+>>>>>>> Reese
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 			CreateAndSetChildDomain (28ms)
 		EndReloadAssembly (1380ms)
 			LoadAssemblies (221ms)
@@ -117,12 +175,31 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (298ms)
 				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (4ms)
+=======
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1395ms)
+			LoadAssemblies (270ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (536ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (520ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (99ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (250ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (7ms)
+>>>>>>> Reese
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+<<<<<<< HEAD
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
 Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -132,6 +209,17 @@ System memory in use after: 137.5 MB.
 
 Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 4113.
 Total: 3.309100 ms (FindLiveObjects: 0.279500 ms CreateObjectMapping: 0.150100 ms MarkObjects: 2.711000 ms  DeleteObjects: 0.167400 ms)
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3670 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.4 MB.
+System memory in use after: 137.6 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 4120.
+Total: 3.620900 ms (FindLiveObjects: 0.291300 ms CreateObjectMapping: 0.148400 ms MarkObjects: 3.073400 ms  DeleteObjects: 0.106900 ms)
+>>>>>>> Reese
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -145,6 +233,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   path: Assets/Prefabs/Placeholder_Projectile.prefab
   artifactKey: Guid(5a14ae1660e4c9b4581320c59d24b66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Placeholder_Projectile.prefab using Guid(5a14ae1660e4c9b4581320c59d24b66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac22883eed1257a8eb3fdd4964527254') in 0.131916 seconds 
@@ -430,6 +519,33 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.012688 seconds.
+=======
+  path: Assets/Prefabs/Placeholder Player.prefab
+  artifactKey: Guid(4d1e85aab5fb006488ed904dd73e50eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Placeholder Player.prefab using Guid(4d1e85aab5fb006488ed904dd73e50eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b648712e49267dd032bfbe6ded1ccdd9') in 0.127316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000466 seconds.
+  path: Assets/Prefabs/Placeholder_Projectile.prefab
+  artifactKey: Guid(5a14ae1660e4c9b4581320c59d24b66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Placeholder_Projectile.prefab using Guid(5a14ae1660e4c9b4581320c59d24b66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750fb648581aecc0d621e41fdbfefda9') in 0.018196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000551 seconds.
+  path: Assets/Prefabs/PlayerBounds.prefab
+  artifactKey: Guid(df5abeb46d24a804c9ad8ffd696e69cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBounds.prefab using Guid(df5abeb46d24a804c9ad8ffd696e69cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f74987d7f090a2f5cf37448ac9e29070') in 0.010597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/Prefabs/PlayerBound.prefab
+  artifactKey: Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBound.prefab using Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0c3d4d739e19f3d403fb0257558b9b') in 0.012259 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021442 seconds.
+>>>>>>> Reese
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -438,6 +554,7 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -477,6 +594,47 @@ System memory in use after: 141.8 MB.
 
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 4140.
 Total: 3.527900 ms (FindLiveObjects: 0.263100 ms CreateObjectMapping: 0.162400 ms MarkObjects: 2.945900 ms  DeleteObjects: 0.154900 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.11 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.613 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1613ms)
+		BeginReloadAssembly (273ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (94ms)
+		EndReloadAssembly (1267ms)
+			LoadAssemblies (222ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (455ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (477ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (114ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3660 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.0 MB.
+System memory in use after: 141.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4131.
+Total: 3.131600 ms (FindLiveObjects: 0.264600 ms CreateObjectMapping: 0.166800 ms MarkObjects: 2.675600 ms  DeleteObjects: 0.023500 ms)
+>>>>>>> Reese
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -489,6 +647,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< HEAD
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.016778 seconds.
@@ -554,6 +713,29 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.015108 seconds.
+=======
+Received Import Request.
+  Time since last request: 189.144407 seconds.
+  path: Assets/Prefabs/PlayerBound.prefab
+  artifactKey: Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBound.prefab using Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb0acb0f97bbe6c2e118ae3e64d6659') in 0.041126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.735614 seconds.
+  path: Assets/Prefabs/PlayerBound.prefab
+  artifactKey: Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBound.prefab using Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e9e80bfdae990f5699f9d4075815d48') in 0.011810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.101705 seconds.
+  path: Assets/Prefabs/PlayerBound.prefab
+  artifactKey: Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBound.prefab using Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3355554b14e88742efa4f51aef4aa9f8') in 0.012481 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018641 seconds.
+>>>>>>> Reese
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\s4001418\Documents\GitHub\Global_Game_Jam_2022\Global Game Jam Team RETCon\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -562,6 +744,7 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.15 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -589,10 +772,40 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (263ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (4ms)
+=======
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.463 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1463ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1185ms)
+			LoadAssemblies (226ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (466ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (390ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (259ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+>>>>>>> Reese
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3664 Unused Serialized files (Serialized files now loaded: 0)
@@ -1709,6 +1922,16 @@ System memory in use after: 142.1 MB.
 
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 4219.
 Total: 2.993000 ms (FindLiveObjects: 0.300100 ms CreateObjectMapping: 0.155400 ms MarkObjects: 2.386300 ms  DeleteObjects: 0.150100 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3660 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.1 MB.
+System memory in use after: 141.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4135.
+Total: 3.196000 ms (FindLiveObjects: 0.269200 ms CreateObjectMapping: 0.180400 ms MarkObjects: 2.700000 ms  DeleteObjects: 0.045500 ms)
+>>>>>>> Reese
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1722,6 +1945,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 5024.316826 seconds.
   path: Assets/Prefabs/BasicEnemy.prefab
   artifactKey: Guid(ccea7daee2ff19f46a31c125f3d9688a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -3356,3 +3580,9 @@ Received Import Request.
   path: Assets/Prefabs/BasicEnemy.prefab
   artifactKey: Guid(ccea7daee2ff19f46a31c125f3d9688a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/BasicEnemy.prefab using Guid(ccea7daee2ff19f46a31c125f3d9688a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad619992834eef221cb83382aa49fe9d') in 0.018981 seconds 
+=======
+  Time since last request: 81.089831 seconds.
+  path: Assets/Prefabs/PlayerBound.prefab
+  artifactKey: Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerBound.prefab using Guid(36364bb984b1db24987426e6a55493d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e693a667b4132a30136cbac49a5f9bac') in 0.032220 seconds 
+>>>>>>> Reese
