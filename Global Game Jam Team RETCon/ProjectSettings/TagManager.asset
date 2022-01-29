@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 553785033
+    locked: 0
+  - name: Projectile
+    uniqueID: 2489547119
+    locked: 0
+  - name: Enemy
+    uniqueID: 2628209897
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 3399004571
+    locked: 0
