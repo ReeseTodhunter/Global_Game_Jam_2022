@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1598691822625557818, guid: ccea7daee2ff19f46a31c125f3d9688a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1598691822625557819, guid: ccea7daee2ff19f46a31c125f3d9688a, type: 3}
       propertyPath: FlightPath
       value: 6
