@@ -65,8 +65,8 @@ public class EnemyPathing : MonoBehaviour
                 TimeToTurn = new float[] { 2.0f, 3.0f, 1.0f };
                 break;
             case 10:
-                Rotation = 1.0f;
-                TimeToTurn = new float[] { 2.0f, 3.0f, 1.0f };
+                Rotation = 3.0f;
+                TimeToTurn = new float[] { 1.0f, 5.0f, 11.0f };
                 break;
         }
     }
@@ -80,8 +80,9 @@ public class EnemyPathing : MonoBehaviour
         }
         if (FlightPath >= 3)
         {
-            RotationPathing(FlightPath);
+            RotationPathing();
         }
+        
         transform.position += transform.up * speed * Time.fixedDeltaTime;
     }
     
@@ -106,23 +107,27 @@ public class EnemyPathing : MonoBehaviour
         }
         
     }
-    void RotationPathing(int Path)
+    void RotationPathing()
     {
         Counter += Time.fixedDeltaTime;
-        if (Counter >= TimeToTurn[TurnNum] && TurnNum <= TimeToTurn.Length)
+        if (Counter >= TimeToTurn[TurnNum] && TurnNum < TimeToTurn.Length)
         {
             RotateDirection = !RotateDirection;
             Counter = 0.0f;
+            TurnNum += 1;
         }
-        if (RotateDirection == false)
-        {
-            transform.Rotate(0.0f, 0.0f, Rotation, Space.World);
-        }
-        if(RotateDirection == true)
-        {
-            transform.Rotate(0.0f, 0.0f, -Rotation, Space.World);
-        }
-        TurnNum++;
+            if (RotateDirection == false)
+            {
+                transform.Rotate(0.0f, 0.0f, Rotation, Space.World);
+            }
+            if (RotateDirection == true)
+            {
+                transform.Rotate(0.0f, 0.0f, -Rotation, Space.World);
+            }
         
+        if(TurnNum >= TimeToTurn.Length)
+        {
+            TurnNum = 0;
+        }        
     }
 }
