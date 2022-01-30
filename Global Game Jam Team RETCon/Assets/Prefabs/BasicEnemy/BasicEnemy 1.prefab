@@ -51,6 +51,8 @@ MonoBehaviour:
   effectTimer: 0
   stunned: 0
   pushed: 0
+  shotDelay: 2
+  projectile: {fileID: 7756155983431251490, guid: 2e4101f80c2e0cb43be14631fbd61d7c, type: 3}
 --- !u!114 &2630005282053440644
 MonoBehaviour:
   m_ObjectHideFlags: 0

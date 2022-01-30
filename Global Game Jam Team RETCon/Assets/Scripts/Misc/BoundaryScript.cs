@@ -7,5 +7,9 @@ public class BoundaryScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other.gameObject);
+        if(other.gameObject.name == "BasicEnemy")
+        {
+            Destroy(other.transform.parent.gameObject);
+        }
     }
 }
