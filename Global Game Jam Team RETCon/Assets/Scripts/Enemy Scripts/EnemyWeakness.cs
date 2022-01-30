@@ -4,38 +4,26 @@ using UnityEngine;
 
 public class EnemyWeakness : MonoBehaviour
 {
-    [SerializeField]
-    private int EnemyType;
+    public int EnemyType;
+    // 1 = Basic
+    // 2 = Potato
+    // 3 = Chilli
+    // 4 = Potato then Chilli 
+    // 5 = Chilli then Potato
+    public int ChilliShield;    //hit with potato
+    public int IceBlock;    //hit with chilli
 
-    string[] Weakness;
-    private bool WeakToPot = false;
-
-    private bool WeakToChil = false;
-
-    private bool WeaktoChilSp = false;
-
-    private bool WeakToPotSp = false;
     // Start is called before the first frame update
     void Start()
     {
-        switch (EnemyType)
-            {
-            case 1:
-                Weakness = new string[] { "Any" };
-                break;
-            case 2:
-                Weakness = new string[] { "Potato" };
-                break;
-            case 3:
-                Weakness = new string[] { "Chili" };
-                break;
-            case 4:
-                Weakness = new string[] { "ChilSp", "Potato" };
-                break;
-            case 5:
-                Weakness = new string[] { "PotSp", "Chili" };
-                break;
-            }
+        if (EnemyType == 4)
+        {
+            ChilliShield = 2;
+        }
+        else if( EnemyType == 5)
+        {
+            IceBlock = 1;
+        }
     }
 
     // Update is called once per frame
@@ -43,6 +31,4 @@ public class EnemyWeakness : MonoBehaviour
     {
         
     }
-
-    public void OnBulletHit() { }
 }
