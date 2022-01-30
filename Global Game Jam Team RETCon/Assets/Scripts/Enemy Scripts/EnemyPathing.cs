@@ -38,11 +38,11 @@ public class EnemyPathing : MonoBehaviour
             //Case 1 and 2 are tutorial flight path
             case 1:
                 LRTurns = new int[] { 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 5.0f };
+                TimeToTurn = new float[] { 5.0f }; //5.0f
                 break;
             case 2:
                 LRTurns = new int[] { 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 5.0f };
+                TimeToTurn = new float[] { 5.0f }; //5.0f
                 break;
             //Case 3 and 4 are mirrored
             case 3:
