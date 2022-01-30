@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef2f85ee5225f34b9bba02d969d1939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyList: []
+  EnemySpawns: []
 --- !u!4 &42745250
 Transform:
   m_ObjectHideFlags: 0
@@ -410,7 +412,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3210352172343237240, guid: 1a96512725ffc3941a6813ec27e0ef50, type: 3}
       propertyPath: m_Name
-      value: EnemyParent
+      value: BasicEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7347323901664302007, guid: 1a96512725ffc3941a6813ec27e0ef50, type: 3}
       propertyPath: FlightPath

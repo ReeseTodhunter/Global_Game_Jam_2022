@@ -39,8 +39,7 @@ public class WaveManager : MonoBehaviour
         SpawnCounter += Time.fixedDeltaTime;
         if(SpawnCounter >= EnemySpawns[WaveSpawnNum].z)
         {
-            EnemySpawns[WaveSpawnNum].z = 0.0f;
-            Instantiate(EnemyList[WaveSpawnNum], EnemySpawns[WaveSpawnNum], Quaternion.identity);
+            Instantiate(EnemyList[WaveSpawnNum], new Vector3(EnemySpawns[WaveSpawnNum].x,EnemySpawns[WaveSpawnNum].y, 0.0f), Quaternion.identity);
             WaveSpawnNum += 1;
         }
 
