@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject fireWall;
 
-    public int Lives;
+    public int Lives;   //Number of player livesS
     private float shotDelay;    //Delay between each shot while holding down space
     private float specialDelay; //Delay between uses of specials
     private bool firing;    //If the player is holding space or not

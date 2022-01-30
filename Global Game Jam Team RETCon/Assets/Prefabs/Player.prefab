@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 553785033
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7787357026319137029, guid: ecc9417120df49242a143843cf25f1fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,6 +172,9 @@ MonoBehaviour:
   animator: {fileID: 4871504711453215192}
   BarrelEnd: {fileID: 4871504711634859128}
   projectile: {fileID: 3256673492539960720, guid: 5a14ae1660e4c9b4581320c59d24b66d, type: 3}
+  jacket: {fileID: 0}
+  fireWall: {fileID: 0}
+  Lives: 0
 --- !u!1 &4871504711634859128
 GameObject:
   m_ObjectHideFlags: 0
