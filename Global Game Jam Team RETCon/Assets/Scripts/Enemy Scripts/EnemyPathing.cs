@@ -160,15 +160,12 @@ public class EnemyPathing : MonoBehaviour
     void SimplePathing()
     {
         Counter += Time.fixedDeltaTime;
-        if (TurnNum >= LRTurns.Length)
-        {
-            TurnNum = 1000;
-        }
+        
         if (TurnNum >= LRTurns.Length && IsMeleeEnemy)//If we've run out of turns and we melee attack: change to melee attack flight pattern
         {
             FlightPath = 99;
         }
-        else if (Counter >= TimeToTurn[TurnNum] && !(TurnNum >= LRTurns.Length))
+        if ( TurnNum < LRTurns.Length && Counter >= TimeToTurn[TurnNum])
         {
             Counter = 0.0f;
             //Find the correct turn in the sequence and find out if it's a left or right
@@ -182,15 +179,11 @@ public class EnemyPathing : MonoBehaviour
             }
             
             TurnNum += 1; //Go to the next turn in the array
-        } 
+        }
     }
     void RotationPathing()
     {
         Counter += Time.fixedDeltaTime;
-        if (TurnNum >= RotationDirection.Length)
-        {
-            TurnNum = 1000;
-        }
         if (TurnNum < TimeToTurn.Length && Counter >= TimeToTurn[TurnNum])
         {
             Counter = 0.0f;
