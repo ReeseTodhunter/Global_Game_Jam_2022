@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
     [SerializeField]
+    private Animator animator;
+    [SerializeField]
     private GameObject BarrelEnd;   //Placement of where to spawn the player's ability/shots
     [SerializeField]
     private GameObject projectile;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        animator.SetInteger("State", 0);
         type = "P";
     }
 
@@ -49,10 +52,12 @@ public class PlayerController : MonoBehaviour
             if (type == "P")
             {
                 type = "C";
+                animator.SetInteger("State", 1);
             }
             else
             {
                 type = "P";
+                animator.SetInteger("State", 0);
             }
         }
     }
