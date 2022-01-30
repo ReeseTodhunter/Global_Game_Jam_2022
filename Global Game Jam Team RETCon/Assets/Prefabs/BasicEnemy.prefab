@@ -44,10 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981550f81eff0554b9680513dfd5453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovemenComponent:
-  - {fileID: 2824855103165004729}
-  - {fileID: 4380463135439288832}
-  FlightPath: 0
+  FlightPath: 1
   IsMeleeEnemy: 0
   Counter: 0
   LRTurns: 
@@ -74,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8290831074618259983}
   m_Layer: 0
-  m_Name: EnemyParent
+  m_Name: BasicEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
