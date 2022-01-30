@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject BarrelEnd;   //Placement of where to spawn the player's ability/shots
     [SerializeField]
-    private GameObject projectile;
+    private GameObject potatoProjectile;
+    [SerializeField]
+    private GameObject chilliProjectile;
     [SerializeField]
     private GameObject jacket;
     [SerializeField]
@@ -105,7 +107,14 @@ public class PlayerController : MonoBehaviour
     void Fire(string ShotType)
     {
         GameObject temp;
-        temp = Instantiate(projectile, BarrelEnd.transform);
+        if (ShotType == "P")
+        {
+            temp = Instantiate(potatoProjectile, BarrelEnd.transform);
+        }
+        else
+        {
+            temp = Instantiate(chilliProjectile, BarrelEnd.transform);
+        }
         temp.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
         temp.GetComponent<ProjectileScript>().projectileType = ShotType;
     }
@@ -118,13 +127,13 @@ public class PlayerController : MonoBehaviour
             GameObject temp;
             if (ShotType == "P")
             {
-                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp = Instantiate(potatoProjectile, BarrelEnd.transform);
                 temp.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
                 temp.GetComponent<ProjectileScript>().projectileType = "SP";
             }
             else
             {
-                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp = Instantiate(chilliProjectile, BarrelEnd.transform);
                 temp.GetComponent<ProjectileScript>().projectileType = "SC";
             }
         }
