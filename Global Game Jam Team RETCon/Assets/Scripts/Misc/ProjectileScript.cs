@@ -34,10 +34,13 @@ public class ProjectileScript : MonoBehaviour
                 if (projectileType == "SP")
                 {
                     other.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+                    other.GetComponent<EnemyPathing>().effectTimer = 2.0f;
+                    other.GetComponent<EnemyPathing>().pushed = true;
                 }
                 else if (projectileType == "SC")
                 {
-
+                other.GetComponent<EnemyPathing>().effectTimer = 2.0f;
+                other.GetComponent<EnemyPathing>().stunned = true;
                 }
                 else
                 { 

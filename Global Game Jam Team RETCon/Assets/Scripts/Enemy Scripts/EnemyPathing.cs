@@ -8,11 +8,6 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     [SerializeField]
-    public GameObject[] MovemenComponent = new GameObject[1];
-
-    MovemenComponent.SetActive(false);
-
-    [SerializeField]
     private int FlightPath = 0; //The number that will decide which flight path the enemy will follow
 
     [SerializeField]
@@ -31,12 +26,13 @@ public class EnemyPathing : MonoBehaviour
 
     float[] TimeToTurn;   //The time that Counter must reach in order for Any Pathing to turn
 
-    float SpawnTimer;
+    public float effectTimer;   //Length of time specials effect enemies
+    public bool stunned;    //if the enemy is stunned or not
+    public bool pushed;  //if the enemy is currently being pushed
+
     // Start is called before the first frame update
     void Start()
     {
-        
-
         switch (FlightPath)
         {
             //Case 1 and 2 are tutorial flight path
@@ -142,27 +138,43 @@ public class EnemyPathing : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (FlightPath < 25)
+        if (!stunned)
         {
-            //Basic Straight Line Movement
-            SimplePathing();
-            transform.position += -transform.right * speed * Time.fixedDeltaTime;
+            if (FlightPath < 25)
+            {
+                //Basic Straight Line Movement
+                SimplePathing();
+                transform.position += -transform.right * speed * Time.fixedDeltaTime;
+            }
+            if (FlightPath >= 25 && FlightPath < 99)
+            {
+                //Curly Spiral Movements
+                RotationPathing();
+                transform.Rotate(0.0f, 0.0f, Rotation, Space.World);
+                transform.position += transform.right * speed * Time.fixedDeltaTime;
+            }
+            if (FlightPath == 99)
+            {
+                //Direct Charge towards the player
+                EnemyMeleeAttack();
+            }
         }
-        if (FlightPath >= 25 && FlightPath <99)
+        if (effectTimer <= 0)
         {
-            //Curly Spiral Movements
-            RotationPathing();
-            transform.Rotate(0.0f, 0.0f, Rotation, Space.World);
-            transform.position += transform.right * speed * Time.fixedDeltaTime;
+            if(pushed)
+            {
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                pushed = false;
+            }
+            else if (stunned)
+            {
+                stunned = false;
+            }
         }
-        if(FlightPath == 99)
+        else
         {
-            //Direct Charge towards the player
-            EnemyMeleeAttack();
+            effectTimer -= Time.fixedDeltaTime;
         }
-        
-        
-        
     }
     
     void SimplePathing()

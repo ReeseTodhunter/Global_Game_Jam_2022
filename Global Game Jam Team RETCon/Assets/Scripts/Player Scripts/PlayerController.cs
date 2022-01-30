@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject fireWall;
 
+    public int Lives;
     private float shotDelay;    //Delay between each shot while holding down space
     private float specialDelay; //Delay between uses of specials
     private bool firing;    //If the player is holding space or not
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Lives = 3;
         animator.SetInteger("State", 0);
         type = "P";
     }
