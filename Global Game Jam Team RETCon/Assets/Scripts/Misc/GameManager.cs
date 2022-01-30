@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameOver)
         {
-            
+            Application.Quit();
         }
     }
 

@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     public void Begin()
     {
-        SceneManager.LoadScene("Player Test");
+        SceneManager.LoadScene("Level");
         gameManager.GetComponent<GameManager>().mainMenu = false;
     }
 
