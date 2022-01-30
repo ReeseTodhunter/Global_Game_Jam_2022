@@ -5,7 +5,10 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     [SerializeField]
-    public int[,] WaveNums = new int [5,2];
+    public int[,] WaveNums = new int[70, 3];
+
+    public GameObject[,] WaveEnemies = new GameObject[70, 2];
+    public float[] Counter = new float[70];
 
     [SerializeField]
     List<GameObject> EnemyList = new List<GameObject>();
@@ -13,47 +16,28 @@ public class WaveManager : MonoBehaviour
     [SerializeField]
     List<Vector3> EnemySpawns = new List<Vector3>();
 
-
+    [SerializeField]
+    private GameObject[] SpawnPoints = new GameObject[9];
 
     private int WaveSpawnNum = 0;
 
     private float SpawnCounter = 0;
-    //Dictionary<int, GameObject> EnemyList = new Dictionary<int, GameObject>();
-
-    /*EnemyList.Add(1, EnemyBasic);
-    EnemyList.Add(2, EnemyChili);
-    EnemyList.Add(3, EnemyPotato);
-    EnemyList.Add(4, EnemyChilSp);
-    EnemyList.Add(5, EnemyPotSp);*/
-
-    //public int[,] RoundAmountEnemy = new int []
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
-       
+        SpawnCounter = 2;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        SpawnCounter += Time.fixedDeltaTime;
-        if(SpawnCounter >= EnemySpawns[WaveSpawnNum].z)
+        SpawnCounter -= Time.fixedDeltaTime;
+        if (SpawnCounter <= 0)
         {
-            Instantiate(EnemyList[WaveSpawnNum], new Vector3(EnemySpawns[WaveSpawnNum].x,EnemySpawns[WaveSpawnNum].y, 0.0f), Quaternion.identity);
+            Instantiate(EnemyList[WaveSpawnNum], new Vector3(EnemySpawns[WaveSpawnNum].x, EnemySpawns[WaveSpawnNum].y, 0.0f), Quaternion.identity);
+            SpawnCounter = EnemySpawns[WaveSpawnNum].z;
             WaveSpawnNum += 1;
-        }
-
-
-    }
-
-    void SpawnWave()
-    {
-        for (int i = 0; i < EnemyList.Count; i++)
-        {
-            Instantiate(EnemyList[i], EnemySpawns[i], Quaternion.identity);
-            //spawn code here
         }
     }
 }
