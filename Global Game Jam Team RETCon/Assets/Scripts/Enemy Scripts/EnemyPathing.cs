@@ -38,11 +38,11 @@ public class EnemyPathing : MonoBehaviour
             //Case 1 and 2 are tutorial flight path
             case 1:
                 LRTurns = new int[] { 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 5.0f };
+                TimeToTurn = new float[] { 5.0f }; //5.0f
                 break;
             case 2:
                 LRTurns = new int[] { 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 5.0f };
+                TimeToTurn = new float[] { 5.0f }; //5.0f
                 break;
             //Case 3 and 4 are mirrored
             case 3:
@@ -83,59 +83,59 @@ public class EnemyPathing : MonoBehaviour
             //Case 11 & 12 are mirrored
             case 11:
                 LRTurns = new int[] { 2, 1, 1, 2, 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 2.0f, 3.0f, 2.0f, 3.0f, 2.0f };
+                TimeToTurn = new float[] { 2.0f, 3.0f, 2.0f, 3.0f, 2.0f }; //12.0f
                 break;
             case 12:
                 LRTurns = new int[] { 1, 2, 2, 1, 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 2.0f, 3.0f, 2.0f, 3.0f, 2.0f };
+                TimeToTurn = new float[] { 2.0f, 3.0f, 2.0f, 3.0f, 2.0f }; //12.0f
                 break;
             //Case 13 & 14 are mirrored
             case 13:
                 LRTurns = new int[] { 1, 2, 2, 1, 1, 1, 1, 2, 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.01f, 2.0f, 2.0f, 1.0f, 3.0f, 3.0f, 1.0f, 0.5f, 3.0f };
+                TimeToTurn = new float[] { 0.01f, 2.0f, 2.0f, 1.0f, 3.0f, 3.0f, 1.0f, 0.5f, 3.0f }; //15.0f
                 break;
             case 14:
                 LRTurns = new int[] { 2, 1, 1, 2, 2, 2, 2, 1, 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.01f, 2.0f, 2.0f, 1.0f, 3.0f, 3.0f, 1.0f, 0.5f, 3.0f };
+                TimeToTurn = new float[] { 0.01f, 2.0f, 2.0f, 1.0f, 3.0f, 3.0f, 1.0f, 0.5f, 3.0f }; //15.0f
                 break;
 
                 //Space for other patterns
             case 19:
                 LRTurns = new int[] { 2,1,1,2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 4.0f, 0.5f, 1.0f, 0.5f };
+                TimeToTurn = new float[] { 4.0f, 0.5f, 1.0f, 0.5f }; //6.0f
                 break;
             case 20:
                 LRTurns = new int[] { 1, 2, 2, 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 4.0f, 0.5f, 1.0f, 0.5f };
+                TimeToTurn = new float[] { 4.0f, 0.5f, 1.0f, 0.5f }; //6.0f
                 break;
                 //Chili Shield pair
             case 21:
                 LRTurns = new int[] { 1, 2, 2, 1, 1, 1, 1, 2, 1, 2, 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.5f, 0.5f, 2.0f, 0.5f, 4.0f, 3.0f, 0.5f, 0.5f, 0.5f, 2.0f, 4.0f };
+                TimeToTurn = new float[] { 0.5f, 0.5f, 2.0f, 0.5f, 4.0f, 3.0f, 0.5f, 0.5f, 0.5f, 2.0f, 4.0f }; //18.0f
                 break;
             case 22:
                 LRTurns = new int[] { 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 1 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.5f, 0.5f, 2.0f, 0.5f, 4.0f, 3.0f, 0.5f, 0.5f, 0.5f, 2.0f, 4.0f };
+                TimeToTurn = new float[] { 0.5f, 0.5f, 2.0f, 0.5f, 4.0f, 3.0f, 0.5f, 0.5f, 0.5f, 2.0f, 4.0f }; //18.0f
                 break;
                 //Melee enemy pair
             case 23: //Melee enemy, make sure to turn on the boolean IsMeleeEnemy
                 LRTurns = new int[] { 2, 1, 1, 2, 2, 1}; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.01f, 3.0f, 2.0f, 2.0f, 2.0f, 2.0f };
+                TimeToTurn = new float[] { 0.01f, 3.0f, 2.0f, 2.0f, 2.0f, 2.0f }; //11.0f
                 break;
             case 24:
                 LRTurns = new int[] { 1, 2, 2, 1, 1, 2 }; //Simple 90 degree turns left and right. 1 for Left, 2 for Right
-                TimeToTurn = new float[] { 0.01f, 3.0f, 2.0f, 2.0f, 2.0f, 2.0f };
+                TimeToTurn = new float[] { 0.01f, 3.0f, 2.0f, 2.0f, 2.0f, 2.0f };//11.0f
                 break;
             case 25:
                 RotationDirection = new int[] { 2, 2 };
                 Rotation = 1.0f;
-                TimeToTurn = new float[] {4.0f,5.0f};
+                TimeToTurn = new float[] {4.0f,5.0f}; // 9
                 speed = -3;
                 break;
             case 26:
                 RotationDirection = new int[] { 1, 1 };
                 Rotation = 1.0f;
-                TimeToTurn = new float[] { 4.0f, 5.0f };
+                TimeToTurn = new float[] { 4.0f, 5.0f }; // 9
                 speed = -3;
                 break;
         }
