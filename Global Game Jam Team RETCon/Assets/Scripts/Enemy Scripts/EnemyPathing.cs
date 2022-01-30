@@ -8,11 +8,6 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     [SerializeField]
-    public GameObject[] MovemenComponent = new GameObject[1];
-
-    MovemenComponent.SetActive(false);
-
-    [SerializeField]
     private int FlightPath = 0; //The number that will decide which flight path the enemy will follow
 
     [SerializeField]
@@ -31,12 +26,9 @@ public class EnemyPathing : MonoBehaviour
 
     float[] TimeToTurn;   //The time that Counter must reach in order for Any Pathing to turn
 
-    float SpawnTimer;
     // Start is called before the first frame update
     void Start()
     {
-        
-
         switch (FlightPath)
         {
             //Case 1 and 2 are tutorial flight path

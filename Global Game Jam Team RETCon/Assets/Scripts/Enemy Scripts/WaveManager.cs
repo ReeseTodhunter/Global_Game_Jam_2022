@@ -12,8 +12,10 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField]
     List<Vector3> EnemySpawns = new List<Vector3>();
+
     private int WaveSpawnNum = 0;
 
+    private float SpawnCounter = 0;
     //Dictionary<int, GameObject> EnemyList = new Dictionary<int, GameObject>();
 
     /*EnemyList.Add(1, EnemyBasic);
@@ -32,16 +34,24 @@ public class WaveManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        SpawnCounter += Time.fixedDeltaTime;
+        if(SpawnCounter >= EnemySpawns[WaveSpawnNum].z)
+        {
+            EnemySpawns[WaveSpawnNum].z = 0.0f;
+            Instantiate(EnemyList[WaveSpawnNum], EnemySpawns[WaveSpawnNum], Quaternion.identity);
+            WaveSpawnNum += 1;
+        }
+
+
     }
 
     void SpawnWave()
     {
-        for(int i = 0; i < EnemyList.Count; i++)
+        for (int i = 0; i < EnemyList.Count; i++)
         {
-            Instantiate(EnemyList[i], EnemySpawns[i],Quaternion.identity);
+            Instantiate(EnemyList[i], EnemySpawns[i], Quaternion.identity);
             //spawn code here
         }
     }
