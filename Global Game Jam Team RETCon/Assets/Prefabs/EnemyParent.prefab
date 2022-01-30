@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981550f81eff0554b9680513dfd5453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovemenComponent:
+  - {fileID: 2824855103165004729}
+  - {fileID: 4380463135439288832}
   FlightPath: 0
   IsMeleeEnemy: 0
   Counter: 0
@@ -106,7 +109,7 @@ GameObject:
   - component: {fileID: 3753253272928242929}
   - component: {fileID: 4329991196829352306}
   - component: {fileID: 8585025583364076314}
-  - component: {fileID: 562673787891074168}
+  - component: {fileID: 1190846839122318075}
   m_Layer: 8
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -240,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Leader: {fileID: 2824855103165004729}
---- !u!114 &562673787891074168
+--- !u!114 &1190846839122318075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,4 +255,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d12376bc40dea4d9cc43800cb44fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 1
+  EnemyType: 0
