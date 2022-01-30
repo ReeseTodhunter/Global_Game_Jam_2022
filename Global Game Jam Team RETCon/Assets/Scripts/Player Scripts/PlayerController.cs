@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private float projectileSpeed = 6.0f;
     [SerializeField]
     private const float baseShotDelay = 0.3f;
+    [SerializeField]
+    private const float baseSpecialDelay = 2.0f;
 
     [SerializeField]
     private Rigidbody2D rb;
@@ -19,8 +21,13 @@ public class PlayerController : MonoBehaviour
     private GameObject BarrelEnd;   //Placement of where to spawn the player's ability/shots
     [SerializeField]
     private GameObject projectile;
+    [SerializeField]
+    private GameObject jacket;
+    [SerializeField]
+    private GameObject fireWall;
 
     private float shotDelay;    //Delay between each shot while holding down space
+    private float specialDelay; //Delay between uses of specials
     private bool firing;    //If the player is holding space or not
     private string type; //current player type (Potato or Chilli)
 
@@ -39,6 +46,8 @@ public class PlayerController : MonoBehaviour
         //Take inputs in Update
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //Shot inputs 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             firing = true;
@@ -47,6 +56,14 @@ public class PlayerController : MonoBehaviour
         {
             firing = false;
         }
+
+        //Special input
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Special(type, specialDelay);
+        }
+
+        //Switch Character input
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (type == "P")
@@ -71,6 +88,11 @@ public class PlayerController : MonoBehaviour
             shotDelay -= Time.fixedDeltaTime;
         }
 
+        if(specialDelay > 0)
+        {
+            specialDelay -= Time.fixedDeltaTime;
+        }
+
         if (firing && shotDelay <= 0)
         {
             Fire(type);
@@ -86,8 +108,23 @@ public class PlayerController : MonoBehaviour
         temp.GetComponent<ProjectileScript>().projectileType = ShotType;
     }
 
-    void Special()
+    void Special(string ShotType, float delay)
     {
-
+        if (delay <= 0)
+        {
+            specialDelay = baseSpecialDelay;
+            GameObject temp;
+            if (ShotType == "P")
+            {
+                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+                temp.GetComponent<ProjectileScript>().projectileType = "SP";
+            }
+            else
+            {
+                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp.GetComponent<ProjectileScript>().projectileType = "SC";
+            }
+        }
     }
 }

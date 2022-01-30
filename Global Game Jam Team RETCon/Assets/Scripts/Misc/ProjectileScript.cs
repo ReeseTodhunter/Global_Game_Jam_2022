@@ -8,6 +8,16 @@ public class ProjectileScript : MonoBehaviour
     GameObject Enemy;
     public string projectileType;
 
+    Vector2 force = new Vector2(10.0f, 0.0f);
+
+    void Awake()
+    {
+        if (projectileType == "SC")
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.name + " hit at time: " + Time.time);
@@ -16,11 +26,23 @@ public class ProjectileScript : MonoBehaviour
 
         Enemy = other.gameObject;
         EnemyType = Enemy.GetComponent<EnemyWeakness>().EnemyType;
+
         switch (EnemyType)
         {
             case 1:     //Basic Enemy
             {
-                Destroy(other.transform.parent.gameObject);
+                if (projectileType == "SP")
+                {
+                    other.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
+                }
+                else if (projectileType == "SC")
+                {
+
+                }
+                else
+                { 
+                    Destroy(other.transform.parent.gameObject); 
+                }
                 break;
             }
             case 2:     //Potato
@@ -28,6 +50,10 @@ public class ProjectileScript : MonoBehaviour
                 if(projectileType == "P")
                 {
                     Destroy(other.transform.parent.gameObject);
+                }
+                else if(projectileType == "SP")
+                {
+
                 }
                 break;
             }

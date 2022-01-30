@@ -140,9 +140,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d12376bc40dea4d9cc43800cb44fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 3
+  EnemyType: 1
   ChilliShield: 0
   IceBlock: 0
+--- !u!50 &602358882
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602358877}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1177348706
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,11 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487148735092623463, guid: 6f0f1e315807aef4faeabbec148a2034, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 4487148735092623463, guid: 6f0f1e315807aef4faeabbec148a2034, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4487148735092623463, guid: 6f0f1e315807aef4faeabbec148a2034, type: 3}
       propertyPath: m_LocalPosition.z
@@ -378,11 +399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4871504711453215194, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.462452
+      value: -6.06
       objectReference: {fileID: 0}
     - target: {fileID: 4871504711453215194, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48442492
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 4871504711453215194, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
       propertyPath: m_LocalPosition.z
@@ -416,6 +437,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4871504711453215196, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
+      propertyPath: jacket
+      value: 
+      objectReference: {fileID: 8018884060441508091, guid: aacd8a19cc8856240bf3babd52563d42, type: 3}
+    - target: {fileID: 4871504711453215196, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
+      propertyPath: fireWall
+      value: 
+      objectReference: {fileID: 5681268090967745301, guid: 106528b1547f72f40ad20443dacd40db, type: 3}
     - target: {fileID: 4871504711453215207, guid: af4c2a7195106f7448332fa1de33d240, type: 3}
       propertyPath: m_Name
       value: Player
