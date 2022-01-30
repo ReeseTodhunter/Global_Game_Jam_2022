@@ -44,13 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981550f81eff0554b9680513dfd5453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovemenComponent:
-  - {fileID: 2824855103165004729}
-  - {fileID: 4380463135439288832}
-  FlightPath: 0
+  FlightPath: 3
   IsMeleeEnemy: 0
   Counter: 0
   LRTurns: 
+  effectTimer: 0
+  stunned: 0
+  pushed: 0
 --- !u!114 &2630005282053440644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
+  ChilliShield: 0
+  IceBlock: 0
 --- !u!1 &3210352172343237240
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8290831074618259983}
   m_Layer: 0
-  m_Name: EnemyParent
+  m_Name: BasicEnemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,4 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d12376bc40dea4d9cc43800cb44fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 0
+  EnemyType: 1
+  ChilliShield: 0
+  IceBlock: 0
