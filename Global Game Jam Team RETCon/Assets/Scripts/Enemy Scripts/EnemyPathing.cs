@@ -30,6 +30,12 @@ public class EnemyPathing : MonoBehaviour
     public bool stunned;    //if the enemy is stunned or not
     public bool pushed;  //if the enemy is currently being pushed
 
+    [SerializeField]
+    private float shotDelay;
+    [SerializeField]
+    private GameObject projectile;
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -139,6 +145,8 @@ public class EnemyPathing : MonoBehaviour
                 speed = -3;
                 break;
         }
+
+        shotDelay = 2.0f;
     }
 
     // Update is called once per frame
@@ -180,6 +188,14 @@ public class EnemyPathing : MonoBehaviour
         else
         {
             effectTimer -= Time.fixedDeltaTime;
+        }
+        if(shotDelay > 0)
+        {
+            shotDelay -= Time.fixedDeltaTime;
+        }
+        else
+        {
+            Fire();
         }
     }
     
@@ -256,6 +272,20 @@ public class EnemyPathing : MonoBehaviour
         if(other.gameObject.name == "Player")
         {
             other.GetComponent<PlayerController>().Lives -= 1;
+        }
+    }
+
+    void Fire()
+    {
+        player = GameObject.Find("Player");
+        if(player != null)
+        {
+            Vector3 direction = (this.transform.position - player.transform.position).normalized;
+            GameObject temp;
+            temp = Instantiate(projectile, this.transform.position, new Quaternion(direction.x, direction.y, direction.z, 0.0f));
+            temp.GetComponent<EnemyProjectiles>().direction = -direction;
+            temp.GetComponent<EnemyProjectiles>().moveSpeed = 4.0f;
+            shotDelay = 2.0f;
         }
     }
 }
