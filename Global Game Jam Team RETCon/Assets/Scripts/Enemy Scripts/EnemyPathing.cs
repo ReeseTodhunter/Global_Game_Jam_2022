@@ -128,6 +128,12 @@ public class EnemyPathing : MonoBehaviour
                 TimeToTurn = new float[] {4.0f,5.0f};
                 speed = -3;
                 break;
+            case 26:
+                RotationDirection = new int[] { 1, 1 };
+                Rotation = 1.0f;
+                TimeToTurn = new float[] { 4.0f, 5.0f };
+                speed = -3;
+                break;
         }
     }
 
@@ -223,6 +229,13 @@ public class EnemyPathing : MonoBehaviour
         else
         {
             transform.position += MeleeAttackDirection * speed * Time.fixedDeltaTime;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name == "Player")
+        {
+            other.GetComponent<PlayerController>().Lives -= 1;
         }
     }
 }
