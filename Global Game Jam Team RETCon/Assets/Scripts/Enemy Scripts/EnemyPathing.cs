@@ -18,7 +18,7 @@ public class EnemyPathing : MonoBehaviour
     [SerializeField]
     private float Counter;      //Delta Timer for use within the script
 
-    private float speed = 2;
+    private float speed = 2;    //The speed the enemy moves
     [SerializeField]
     int[] LRTurns;              //Array that stores simple turns for the Enemies to use
     int[] RotationDirection;    //Sets whether the Rotate Pathing will go left, right or straight, Left is 1, Right is 2, Straight is 3

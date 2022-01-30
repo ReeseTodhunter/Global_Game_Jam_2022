@@ -7,7 +7,7 @@ public class ProjectileScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.name + " hit at time: " + Time.time);
-        Destroy(other.gameObject);
+        Destroy(other.transform.parent.gameObject);
         Destroy(this.gameObject);
     }
 }
