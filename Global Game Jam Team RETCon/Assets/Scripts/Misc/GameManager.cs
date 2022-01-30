@@ -1,18 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager GM;
+    public static float waveNum;    //Stores the number of wave you're on
+    public static int currentCharacter; // 1 = Potato // 2 = Chilli
+    public static bool gameIsPaused;
+    public bool gameOver;
+    public bool mainMenu;
+
+    void Awake()
     {
-        GameManager GM = new GameManager();
+
+        if (GM == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            GM = this;
+        }
+        else if (GM != this)
+        {
+            Destroy(gameObject);
+        }
+
+        //Setup Startup values
+        gameIsPaused = false;
+        waveNum = 0;
+        currentCharacter = 1;
+        gameOver = false;
+        mainMenu = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (mainMenu)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (gameOver)
+        {
+            
+        }
+    }
+
+    void Reset()
+    {
+        currentCharacter = 1;
+        gameIsPaused = false;
+        waveNum = 0;
     }
 }

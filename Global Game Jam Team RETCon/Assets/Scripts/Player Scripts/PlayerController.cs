@@ -10,18 +10,37 @@ public class PlayerController : MonoBehaviour
     private float projectileSpeed = 6.0f;
     [SerializeField]
     private const float baseShotDelay = 0.3f;
+    [SerializeField]
+    private const float baseSpecialDelay = 2.0f;
 
     [SerializeField]
     private Rigidbody2D rb;
     [SerializeField]
-    private GameObject BarrelEnd;
+    private Animator animator;
+    [SerializeField]
+    private GameObject BarrelEnd;   //Placement of where to spawn the player's ability/shots
     [SerializeField]
     private GameObject projectile;
+    [SerializeField]
+    private GameObject jacket;
+    [SerializeField]
+    private GameObject fireWall;
 
-    private float shotDelay;
-    private bool firing;
+    public int Lives;   //Number of player livesS
+    private float shotDelay;    //Delay between each shot while holding down space
+    private float specialDelay; //Delay between uses of specials
+    private bool firing;    //If the player is holding space or not
+    private string type; //current player type (Potato or Chilli)
+
 
     Vector2 movement;
+
+    void Start()
+    {
+        Lives = 3;
+        animator.SetInteger("State", 0);
+        type = "P";
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +48,8 @@ public class PlayerController : MonoBehaviour
         //Take inputs in Update
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //Shot inputs 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             firing = true;
@@ -36,6 +57,27 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space))
         {
             firing = false;
+        }
+
+        //Special input
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Special(type, specialDelay);
+        }
+
+        //Switch Character input
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (type == "P")
+            {
+                type = "C";
+                animator.SetInteger("State", 1);
+            }
+            else
+            {
+                type = "P";
+                animator.SetInteger("State", 0);
+            }
         }
     }
 
@@ -48,17 +90,43 @@ public class PlayerController : MonoBehaviour
             shotDelay -= Time.fixedDeltaTime;
         }
 
+        if(specialDelay > 0)
+        {
+            specialDelay -= Time.fixedDeltaTime;
+        }
+
         if (firing && shotDelay <= 0)
         {
-            Fire();
+            Fire(type);
             shotDelay = baseShotDelay;
         }
     }
 
-    void Fire()
+    void Fire(string ShotType)
     {
         GameObject temp;
         temp = Instantiate(projectile, BarrelEnd.transform);
         temp.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+        temp.GetComponent<ProjectileScript>().projectileType = ShotType;
+    }
+
+    void Special(string ShotType, float delay)
+    {
+        if (delay <= 0)
+        {
+            specialDelay = baseSpecialDelay;
+            GameObject temp;
+            if (ShotType == "P")
+            {
+                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+                temp.GetComponent<ProjectileScript>().projectileType = "SP";
+            }
+            else
+            {
+                temp = Instantiate(projectile, BarrelEnd.transform);
+                temp.GetComponent<ProjectileScript>().projectileType = "SC";
+            }
+        }
     }
 }
